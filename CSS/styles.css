@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 0 20px;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.w50{
+    width: 50%;
+    float: left;
+    flex: 1;
+    padding-right: 10px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+.form-box{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    padding: 40px 40px;
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+}
+.form-box h2{
+    font-size: 30px;
+}
+.form-box p{
+    color: #3D3D3D;
+}
+.form-box p a{
+    color: #731500;
+    text-decoration: none;
+}
+.form-box form{
+    margin: 20px 0px;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #3D3D3D;
+    font-size: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0,5);
+    transition: all 0.4s ease;
+}
+form .input-group input:focus{
+    border-color: #731500;
+}
+form .input-group button{ 
+    width: 100%;
+    height: 50px;
+    background: #731500;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Menu hover */
+nav{
+    transform: translateX('-50%'); /* mentem centralizado*/
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    margin: 1em 2em;
+    display: horizontal;
+}
+nav a{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+    position: top;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background: #731500;
+    border-radius: 20px;
+    transition: all .5s ease 0s;
+}
+a:nth-child(1){
+    width: 100px;   
+}
+nav .start-menu,a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+a:nth-child(2){
+    width: 120px;   
+}
+nav .start-eventos,a:nth-child(2):hover~.animation{
+    width: 120px;
+    left: 100px;
+}
+a:nth-child(3){
+    width: 120px;   
+}
+nav .start-contato,a:nth-child(3):hover~.animation{
+    width: 130px;
+    left: 210px;
+}
+a:nth-child(4){
+    width: 100px;   
+}
+nav .start-ajuda,a:nth-child(4):hover~.animation{
+    width: 110px;
+    left: 335px;
+}
+a:nth-child(5){
+    width: 100px;   
+}
+nav .start-Log-in,a:nth-child(5):hover~.animation{
+    width: 100px;
+    left: 440px;
+}
+/* lista */
+.list{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    margin-top:  200px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.tabela {
+    border-collapse: collapse;
+    width: 100%;
+}
+/* linhas ímpares */
+.tabela tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.32);
+}
+/* Para telas de até 768px (tablets e celulares) */
+@media screen and (max-width: 768px) {
+    .w50 {
+        width: 50%;
+        padding: 0;
+    }
+    body {
+        padding: 0 10px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* Para telas de até 425px (smartphones) */
+@media screen and (max-width: 425px) {
+    .w50 {
+        width: 100%;
+        padding-right: 10px;
+    }
+    nav{
+        z-index: 1000;
+        overflow: hidden;
+        width: auto;
+        height: 50px;
+        display: horizontal;
+    }
+    nav a {
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+        width: 10%;
+        padding: 0 10px;
+    }
+    .form-box {
+        padding: 20px 20px;
+    }
+}
